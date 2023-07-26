@@ -1,11 +1,16 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Anton } from 'next/font/google'
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['500', '600'],
+  weight: ['400', '500', '600'],
   variable: '--font-inter',
+})
+const anton = Anton({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-anton',
 })
 
 export const metadata: Metadata = {
@@ -20,7 +25,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.variable} font-sans text-white bg-black`}>
+      <body
+        className={`${inter.variable} ${anton.variable} font-sans text-white bg-black`}
+      >
         {children}
       </body>
     </html>
