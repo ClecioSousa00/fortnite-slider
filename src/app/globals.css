@@ -2,3 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-button-prev:after,  .swiper-button-next:after{
+  color: #D0D5DD;
+  font-size: 24px !important;
+  transition: all .3s ease;
+}
+.swiper-button-prev:hover:after,  .swiper-button-next:hover:after{
+  color: #F9FAFB;
+}
+.swiper-button-next{
+  margin-left:80px !important;
+}
+.swiper-button-prev, .swiper-button-next{
+  top:90% !important;
+  left:80px !important;
+  gap: 30px !important;
+  border: 2px solid #D0D5DD !important;
+  border-radius: 100%;
+  width: 50px !important;
+  height: 50px !important;
+}

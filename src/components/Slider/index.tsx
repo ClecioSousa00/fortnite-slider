@@ -1,11 +1,11 @@
 'use client'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { CharacterInfos } from '../CharacterInfos'
-import { Autoplay, Pagination, Navigation } from 'swiper/modules'
+import { Autoplay, Navigation } from 'swiper/modules'
 import { data } from '@/CharacterData'
 
 import 'swiper/css'
-import 'swiper/css/pagination'
+
 import 'swiper/css/navigation'
 
 export const Slider = () => {
@@ -17,11 +17,8 @@ export const Slider = () => {
         delay: 2500,
         disableOnInteraction: false,
       }}
-      pagination={{
-        clickable: true,
-      }}
       navigation={true}
-      modules={[Autoplay, Pagination, Navigation]}
+      modules={[Autoplay, Navigation]}
       className="w-full h-full"
     >
       {data.map((item, index) => (

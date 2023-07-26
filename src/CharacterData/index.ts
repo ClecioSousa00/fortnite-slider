@@ -16,7 +16,7 @@ import bannerTeef from '@/assets/bannerTeef.png'
 import teef from '@/assets/characters/teef.png'
 
 import bannerMandalorian from '@/assets/bannerMandalorian.png'
-import mandalorian from '@/assets/characters/manalorian.png'
+import mandalorian from '@/assets/characters/mandalorian.png'
 
 // type CharacterProps = {
 //   title: string

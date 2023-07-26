@@ -19,26 +19,26 @@ type CharacterProps = {
 
 export const CharacterInfos = ({ data }: CharacterProps) => {
   return (
-    <div className=" h-full w-full relative ">
+    <div className=" h-full w-full">
       <Image
         className="absolute inset-0 w-full h-full object-cover"
         src={data.banner}
-        alt={`backgourn do ${data.title}`}
+        alt={`background do ${data.title}`}
       />
       <div className="relative h-full z-20 w-full  flex items-center justify-between px-20">
-        <div className="  ">
-          <h1 className=" break-words font-mono w-full max-w-[360px] text-[8.75rem] font-black leading-[140px] uppercase">
+        <div className=" max-w-[420px]">
+          <h1 className="  break-words font-mono w-full max-w-[460px] text-[8.75rem] font-black leading-[140px] uppercase">
             {data.title}
           </h1>
-          <p className="mt-8  text-lg text-primary-dark font-normal">
+          <p className="mt-8 text-lg text-primary-dark font-normal">
             {data.description}
           </p>
         </div>
-        <div className=" relative ">
-          <div className="absolute inset-0  bg-gradient-character "></div>
-          <Image className="max-w-lg" src={data.img} alt={data.title} />
-        </div>
         <div>
+          <div className="absolute w-full  inset-0 bg-gradient-character -z-10"></div>
+          <Image className="-z-20 relative " src={data.img} alt={data.title} />
+        </div>
+        <div className="">
           <p className="text-base text-secondary font-semibold uppercase">
             {data.serie}
           </p>
