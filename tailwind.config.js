@@ -25,3 +25,4 @@ module.exports = {
   },
   plugins: [],
 }
+// linear-gradient(180deg, rgba(0, 0, 0, 0.00) 73.12%, rgba(0, 0, 0, 0.9) 87.29%)

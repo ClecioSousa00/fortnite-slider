@@ -2,10 +2,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { CharacterInfos } from '../CharacterInfos'
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
-
-import bannerDuende from '@/assets/bannerDuende.png'
-import bannerDoctor from '@/assets/bannerDoctor.png'
-import bannerMadcap from '@/assets/bannerMadcap.png'
+import { data } from '@/CharacterData'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -20,7 +17,6 @@ export const Slider = () => {
         delay: 2500,
         disableOnInteraction: false,
       }}
-      loop
       pagination={{
         clickable: true,
       }}
@@ -28,15 +24,18 @@ export const Slider = () => {
       modules={[Autoplay, Pagination, Navigation]}
       className="w-full h-full"
     >
-      <SwiperSlide>
+      {data.map((item, index) => (
+        <SwiperSlide key={index}>
+          <CharacterInfos data={item} />
+        </SwiperSlide>
+      ))}
+
+      {/* <SwiperSlide>
         <CharacterInfos />
       </SwiperSlide>
       <SwiperSlide>
         <CharacterInfos />
-      </SwiperSlide>
-      <SwiperSlide>
-        <CharacterInfos />
-      </SwiperSlide>
+      </SwiperSlide> */}
     </Swiper>
   )
 }
