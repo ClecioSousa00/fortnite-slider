@@ -5,7 +5,6 @@ import { Autoplay, Navigation } from 'swiper/modules'
 import { data } from '@/CharacterData'
 
 import 'swiper/css'
-
 import 'swiper/css/navigation'
 
 export const Slider = () => {
@@ -26,13 +25,6 @@ export const Slider = () => {
           <CharacterInfos data={item} />
         </SwiperSlide>
       ))}
-
-      {/* <SwiperSlide>
-        <CharacterInfos />
-      </SwiperSlide>
-      <SwiperSlide>
-        <CharacterInfos />
-      </SwiperSlide> */}
     </Swiper>
   )
 }

@@ -1,4 +1,6 @@
+'use client'
 import Image, { StaticImageData } from 'next/image'
+import { motion } from 'framer-motion'
 
 import { Skills } from '../Skills'
 import { SwordSvg } from '../icons/SwordSvg'
@@ -25,9 +27,18 @@ export const CharacterInfos = ({ data }: CharacterProps) => {
         src={data.banner}
         alt={`background do ${data.title}`}
       />
-      <div className="relative h-full z-20 w-full  flex items-center justify-between px-20">
+      <motion.div
+        className="relative h-full z-20 w-full  flex items-center justify-between px-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 0.3,
+          delay: 0.2,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+      >
         <div className=" max-w-[420px]">
-          <h1 className="  break-words font-mono w-full max-w-[460px] text-[8.75rem] font-black leading-[140px] uppercase">
+          <h1 className="  break-words font-mono w-full max-w-[460px] text-[7.75rem] font-black leading-[140px] uppercase">
             {data.title}
           </h1>
           <p className="mt-8 text-lg text-primary-dark font-normal">
@@ -46,17 +57,17 @@ export const CharacterInfos = ({ data }: CharacterProps) => {
           <p className="text-primary-dark ">{data.subDescription}</p>
           <div className="flex gap-5 mt-10">
             <Skills power={3} title="Pumpkin Bomb">
-              <SwordSvg />{' '}
+              <SwordSvg />
             </Skills>
             <Skills power={4} title="Pumpkin P'axe">
-              <TargetSvg />{' '}
+              <TargetSvg />
             </Skills>
             <Skills power={4} title="Goblin Glider">
-              <RaySvg />{' '}
+              <RaySvg />
             </Skills>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

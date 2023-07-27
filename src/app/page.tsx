@@ -1,13 +1,5 @@
-import { Header } from '@/components/Header'
-import { Slider } from '@/components/Slider'
+import { Main } from '@/components/Main'
 
 export default function Home() {
-  return (
-    <div className="h-screen ">
-      <Header />
-      <main className="h-full w-full">
-        <Slider />
-      </main>
-    </div>
-  )
+  return <Main />
 }
