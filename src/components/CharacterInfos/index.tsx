@@ -26,30 +26,53 @@ export const CharacterInfos = ({ data }: CharacterProps) => {
         className="absolute inset-0 w-full h-full object-cover"
         src={data.banner}
         alt={`background do ${data.title}`}
+        priority
       />
-      <motion.div
-        className="relative h-full z-20 w-full  flex items-center justify-between px-20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          duration: 0.3,
-          delay: 0.2,
-          ease: [0, 0.71, 0.2, 1.01],
-        }}
-      >
-        <div className=" max-w-[420px]">
+      <div className="relative h-full z-20 w-full  flex items-center justify-between px-20  ">
+        <motion.div
+          className=" max-w-[420px]"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.3,
+            delay: 0.2,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
           <h1 className="  break-words font-mono w-full max-w-[460px] text-[7.75rem] font-black leading-[140px] uppercase">
             {data.title}
           </h1>
           <p className="mt-8 text-lg text-primary-dark font-normal">
             {data.description}
           </p>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.3,
+            delay: 0.2,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
           <div className="absolute w-full  inset-0 bg-gradient-character -z-10"></div>
-          <Image className="-z-20 relative " src={data.img} alt={data.title} />
-        </div>
-        <div className="">
+          <Image
+            className="-z-20 relative "
+            src={data.img}
+            alt={data.title}
+            priority
+          />
+        </motion.div>
+        <motion.div
+          className=""
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.3,
+            delay: 0.2,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
           <p className="text-base text-secondary font-semibold uppercase">
             {data.serie}
           </p>
@@ -66,8 +89,8 @@ export const CharacterInfos = ({ data }: CharacterProps) => {
               <RaySvg />
             </Skills>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   )
 }
