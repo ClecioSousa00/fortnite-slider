@@ -6,6 +6,7 @@ import { Skills } from '../Skills'
 import { SwordSvg } from '../icons/SwordSvg'
 import { RaySvg } from '../icons/RaySvg'
 import { TargetSvg } from '../icons/TargetSvg'
+import { GetStartedButton } from '../GetStartedButton'
 
 type CharacterProps = {
   data: {
@@ -78,7 +79,7 @@ export const CharacterInfos = ({ data }: CharacterProps) => {
           </p>
           <h2 className="font-mono text-3xl uppercase mb-5">{data.subTitle}</h2>
           <p className="text-primary-dark ">{data.subDescription}</p>
-          <div className="flex gap-5 mt-10">
+          <div className="flex gap-5 my-10">
             <Skills power={3} title="Pumpkin Bomb">
               <SwordSvg />
             </Skills>
@@ -89,6 +90,7 @@ export const CharacterInfos = ({ data }: CharacterProps) => {
               <RaySvg />
             </Skills>
           </div>
+          <GetStartedButton />
         </motion.div>
       </div>
     </div>
