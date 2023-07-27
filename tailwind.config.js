@@ -21,8 +21,10 @@ module.exports = {
         secondary: '#F79009',
         'secondary-dark': '#DC6803',
       },
+      boxShadow: {
+        'shadow-button': '0px 1px 7px 1px rgba(255,255,255,0.75)',
+      },
     },
   },
   plugins: [],
 }
-// linear-gradient(180deg, rgba(0, 0, 0, 0.00) 73.12%, rgba(0, 0, 0, 0.9) 87.29%)

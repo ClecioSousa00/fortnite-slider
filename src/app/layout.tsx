@@ -24,12 +24,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR">
-      <body
-        className={`${inter.variable} ${anton.variable} font-sans text-white bg-black`}
-      >
-        {children}
-      </body>
+    <html lang="pt-BR" className={`${inter.variable} ${anton.variable} `}>
+      <body className={`font-sans text-white bg-black`}>{children}</body>
     </html>
   )
 }
